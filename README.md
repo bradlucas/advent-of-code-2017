@@ -1,6 +1,8 @@
 # advent-of-code-2017
 
-Solving [Advent of Code 2017](http://adventofcode.com) with Clojure
+Solving [Advent of Code 2017](http://adventofcode.com) with Clojure.
+
+For other Clojurians with solutions see [https://github.com/adventofcode-clojurians/adventofcode-clojurians](https://github.com/adventofcode-clojurians/adventofcode-clojurians).
 
 ## Usage
 
