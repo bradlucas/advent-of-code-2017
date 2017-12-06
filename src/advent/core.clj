@@ -3,6 +3,7 @@
             [advent.day1.captcha2 :as day1-part2]
             [advent.day2.checksum :as day2]
             [advent.day3.spiral :as day3]
+            [advent.day4.passphrase :as day4]
             )
   (:gen-class))
 
@@ -18,4 +19,7 @@
 
   (println (format "Day 3 / Part 1 : %d" (day3/run-part1)))
   (println (format "Day 3 / Part 2 : %d" (day3/run-part2)))
-  )
+
+  (println (format "Day 4 / Part 1 : %d" (day4/run-part1)))
+  (println (format "Day 4 / Part 2 : %d" (day4/run-part2)))
+)
