@@ -2,6 +2,7 @@
   (:require [advent.day1.captcha :as day1-part1]
             [advent.day1.captcha2 :as day1-part2]
             [advent.day2.checksum :as day2]
+            [advent.day3.spiral :as day3]
             )
   (:gen-class))
 
@@ -14,4 +15,7 @@
 
   (println (format "Day 2 / Part 1 : %d" (day2/run-part1)))
   (println (format "Day 2 / Part 2 : %d" (day2/run-part2)))
+
+  (println (format "Day 3 / Part 1 : %d" (day3/run-part1)))
+  (println (format "Day 3 / Part 2 : %d" (day3/run-part2)))
   )
