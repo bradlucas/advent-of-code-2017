@@ -5,6 +5,7 @@
             [advent.day3.spiral :as day3]
             [advent.day4.passphrase :as day4]
             [advent.day5.trampoline :as day5]
+            [advent.day6.reallocation :as day6]
             )
   (:gen-class))
 
@@ -26,4 +27,7 @@
 
   (println (format "Day 5 / Part 1 : %d" (day5/run-part1)))
   (println (format "Day 5 / Part 2 : %d" (day5/run-part2))) 
-)
+
+  (println (format "Day 6 / Part 1 : %d" (day6/run-part1)))
+  (println (format "Day 6 / Part 2 : %d" (day6/run-part2))) 
+  )
