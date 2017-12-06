@@ -4,6 +4,7 @@
             [advent.day2.checksum :as day2]
             [advent.day3.spiral :as day3]
             [advent.day4.passphrase :as day4]
+            [advent.day5.trampoline :as day5]
             )
   (:gen-class))
 
@@ -22,4 +23,7 @@
 
   (println (format "Day 4 / Part 1 : %d" (day4/run-part1)))
   (println (format "Day 4 / Part 2 : %d" (day4/run-part2)))
+
+  (println (format "Day 5 / Part 1 : %d" (day5/run-part1)))
+  (println (format "Day 5 / Part 2 : %d" (day5/run-part2))) 
 )
