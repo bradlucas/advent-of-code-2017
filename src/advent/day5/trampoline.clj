@@ -8,7 +8,7 @@
 ;; 2 (4) 0 1 -2 => 
 ;; 2 5 0 1 -2 =>
 
-(def url "/Users/Brad/work/advent-of-code-2017/src/advent/day5/day5.txt")
+(def url "./src/advent/day5/day5.txt")
 
 
 

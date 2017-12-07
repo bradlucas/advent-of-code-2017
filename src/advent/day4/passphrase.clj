@@ -3,7 +3,7 @@
 
 ;; input
 ;; http://adventofcode.com/2017/day/4/input
-(def url "/Users/Brad/work/advent-of-code-2017/src/advent//day4/day4.txt")
+(def url "./src/advent//day4/day4.txt")
 
 
 ;; valid-passphrase

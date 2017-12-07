@@ -13,7 +13,7 @@
 ;; stop when a previous state is reached
 
 
-(def url "/Users/brad/work/advent-of-code-2017/src/advent/day6/day6.txt")
+(def url "./src/advent/day6/day6.txt")
 
 (defn load-file [url]
   (mapv #(Integer/parseInt %) (clojure.string/split (clojure.string/trim (slurp url)) #"\t")))
