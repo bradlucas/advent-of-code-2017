@@ -10,6 +10,7 @@
             [advent.day8.registers :as day8]
             [advent.day9.stream :as day9]
             [advent.day10.knothash :as day10]
+            [advent.day11.hexed :as day11]
             )
   (:gen-class))
 
@@ -46,5 +47,8 @@
 
   (println (format "Day 10 / Part 1 : %d" (day10/run-part1)))
   (println (format "Day 10 / Part 2 : %s" (day10/run-part2)))
+  
+  (println (format "Day 11 / Part 1 : %d" (day11/run-part1)))
+  (println (format "Day 11 / Part 2 : %s" (day11/run-part2)))
   
   )
