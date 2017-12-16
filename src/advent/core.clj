@@ -13,6 +13,7 @@
             [advent.day11.hexed :as day11]
             [advent.day12.plumber :as day12]
             [advent.day13.scanner :as day13]
+            [advent.day14.defrag :as day14]
             )
   (:gen-class))
 
@@ -56,4 +57,6 @@
   (println (format "Day 13 / Part 1 : %d" (day13/run-part1)))
   (println (format "Day 13 / Part 2 : %d" (day13/run-part2)))
 
+  (println (format "Day 14 / Part 1 : %d" (day14/run-part1)))
+  (println (format "Day 14 / Part 2 : %d" (day14/run-part2)))
   )
