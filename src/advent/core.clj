@@ -16,6 +16,7 @@
             [advent.day14.defrag :as day14]
             [advent.day15.dueling :as day15]
             [advent.day15.dueling2 :as day152]
+            [advent.day16.promenade :as day16]
             )
   (:gen-class))
 
@@ -64,4 +65,8 @@
 
   (println (format "Day 15 / Part 1 : %d" (day15/run-part1)))
   (println (format "Day 15 / Part 2 : %d" (day152/run-part2)))
+
+  (println (format "Day 16 / Part 1 : %s" (day16/run-part1)))
+  (println (format "Day 16 / Part 2 : %s" (day16/run-part2)))
+  
   )
