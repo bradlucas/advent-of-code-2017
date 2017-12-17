@@ -14,6 +14,8 @@
             [advent.day12.plumber :as day12]
             [advent.day13.scanner :as day13]
             [advent.day14.defrag :as day14]
+            [advent.day15.dueling :as day15]
+            [advent.day15.dueling2 :as day152]
             )
   (:gen-class))
 
@@ -59,4 +61,7 @@
 
   (println (format "Day 14 / Part 1 : %d" (day14/run-part1)))
   (println (format "Day 14 / Part 2 : %d" (day14/run-part2)))
+
+  (println (format "Day 15 / Part 1 : %d" (day15/run-part1)))
+  (println (format "Day 15 / Part 2 : %d" (day152/run-part2)))
   )
