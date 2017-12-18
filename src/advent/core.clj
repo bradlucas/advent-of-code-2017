@@ -17,6 +17,7 @@
             [advent.day15.dueling :as day15]
             [advent.day15.dueling2 :as day152]
             [advent.day16.promenade :as day16]
+            [advent.day17.spinlock :as day17]
             )
   (:gen-class))
 
@@ -68,5 +69,8 @@
 
   (println (format "Day 16 / Part 1 : %s" (day16/run-part1)))
   (println (format "Day 16 / Part 2 : %s" (day16/run-part2)))
+
+  (println (format "Day 17 / Part 1 : %s" (day17/run-part1)))
+  (println (format "Day 17 / Part 2 : %s" (day17/run-part2)))
   
   )
