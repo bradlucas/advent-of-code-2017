@@ -125,6 +125,14 @@
 ;; Part 1
 (defn run-part1-test []
   (run (load-program test-program-text)))
+;; 4
 
 (defn run-part1 []
   (run (load-program program-text)))
+;; 3423
+
+;; Test case to ensure things work when refactoring
+(defn part1-test []
+  (and (= (run-part1-test) 4)
+       (= (run-part1) 3423)))
+
