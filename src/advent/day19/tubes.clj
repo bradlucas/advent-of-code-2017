@@ -45,15 +45,9 @@
    (get-col-count diag)])
   
 (defn letter? [c]
-  (println "letter?" c)
+  ;; (println "letter?" c)
   (and (>= (int c) (int \A))
        (<= (int c) (int \Z))))
-
-(defn neighbors [diag pos dir]
-  (let [[height width] (get-size diag)]
-    )
-  ;; TODO
-  )
 
 (defn get-next-pos [pos dir]
   ((fn [[a b] [c d]] [(+ a c) (+ b d)]) pos dir))
@@ -67,13 +61,18 @@
       false)))
 
 (defn continue [diag pos dir path]
-  (println "continue" pos dir path)
+  ;; (println "continue" pos dir path)
   (let [c (get-value diag pos)
         path (if (letter? c) (conj path c) path)
         pos (get-next-pos pos dir)]
     (if (or (offmap? diag pos) (= (get-value diag pos) \space))
       [nil dir path]
       [pos dir path])))
+
+(def up [-1 0])
+(def down [1 0])
+(def right [0 1])
+(def left [0 -1])
 
 (defn turn-left [dir]
   (cond
@@ -105,9 +104,9 @@
                  
 (defn step [diag pos dir path]
   ;; return next pos, new direction and the stored letters
-  (println "step" pos dir path)
+  ;; (println "step" pos dir path)
   (let [c (get-value diag pos)]
-    (println c)
+    ;; (println c)
     (if (or (= c \|)
              (= c \-)
              (letter? c))
@@ -117,11 +116,6 @@
       )
     )
   )
-
-(def up [-1 0])
-(def down [1 0])
-(def right [0 1])
-(def left [0 -1])
 
 (defn traverse [diag]
   (loop [[pos dir path] [(get-starting-position diag) down []]]
@@ -133,7 +127,7 @@
 
 (defn run-part1 []
   (apply str (traverse (load-diagram (slurp input-file)))))
-
+;; RYLONKEWB
 
 
 (defn traverse2 [diag]
@@ -148,11 +142,12 @@
 
 (defn run-part2-test []
   (let [[s cnt](traverse2 (load-diagram s))]
-    (println s)
+    ;; (println s)
     cnt))
 
 
 (defn run-part2 []
   (let [[s cnt](traverse2 (load-diagram (slurp input-file)))]
-    (println s)
+    ;; (println s)
     cnt))
+;; 16016
