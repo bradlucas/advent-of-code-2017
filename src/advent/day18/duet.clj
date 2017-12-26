@@ -42,10 +42,13 @@
     {:cmd (keyword a)
      :val (convert-if-numeric b)})))
 
-(defn load-program [s]
-  (let [program (mapv parse-line (str/split s #"\n"))
-        registers (into {} (map (fn [n] {n 0}) (distinct (filter identity (map :reg program)))))]
-    [program registers]))
+(defn load-program [txt]
+  (let [p (mapv parse-line (str/split txt #"\n"))
+        r (into {} (map (fn [n] {n 0}) (distinct (filter keyword? (filter identity (flatten (map (juxt :reg :val) p)))))))]
+    ;; (println p)
+    ;; (println r)
+    [p r]
+    ))
 
 (defn goal [program idx registers]
   ;; are we at a rcv with a register with a value
@@ -72,8 +75,6 @@
     (assoc registers reg (* (reg registers) (val registers)))))
 
 (defn mod-value [registers reg val]
-
-
   (if (not (keyword? val))
     (assoc registers reg (mod (reg registers) val))
     (assoc registers reg (mod (reg registers) (val registers)))))
@@ -82,9 +83,7 @@
   (assoc registers reg (+ (reg registers) val)))
 
 (defn jump [registers reg val idx]
-
   (let [reg-value (reg registers)]
-
     (if (> reg-value 0)
       (+ idx val)
       (inc idx))))
