@@ -13,6 +13,11 @@
 
 
 ;; {:p {:x 3 :y 0 :z 0} :v {:x 2 :y 0 :z 0} :a {:x -1 :y 0 :z 0} :dist 0}
+;; {:p {:x 4 :y 0 :z 0} :v {:x 2 :y 0 :z 0} :a {:x -1 :y 0 :z 0} :dist 0}
+
+(def t [{:p {:x 3 :y 0 :z 0} :v {:x 2 :y 0 :z 0} :a {:x -1 :y 0 :z 0} :dist 0}
+        {:p {:x 3 :y 0 :z 0} :v {:x 2 :y 0 :z 0} :a {:x -1 :y 0 :z 0} :dist 0}
+        {:p {:x 4 :y 0 :z 0} :v {:x 2 :y 0 :z 0} :a {:x -1 :y 0 :z 0} :dist 0}])
 
 (defn build-xyz [s]
   (zipmap [:x :y :z] (map #(Integer/parseInt %) (str/split (str/trim (second (re-find #".=<(.*)>" s))) #","))))
@@ -86,3 +91,41 @@
   (let [data (load-data (slurp input-file))]
     (process data)))
 ;; 170
+
+
+;; Part 2
+;; On each iteration remove particles that have the same position
+;; Iterate/loop until there are no collisions
+
+(defn no-collisions [data]
+  ;; return true if all the points are unique
+  ;; Add all data points to a set and compare the number of the set and the number of data points
+  (let [data-count (count data)
+        set-count (count (into #{} (map :p data)))]
+    (= data-count set-count)))
+
+(defn collisions [data]
+  (not (no-collisions data)))
+
+(defn not-in-points [points point]
+  ;; return true if point is not in points
+  (not (points point)))
+
+(defn remove-collisions [data]
+  ;; which points have duplicates
+  (if-let [points (into #{} (map key (filter (fn [m] (> (count (val m)) 1)) (group-by :p data))))]
+    (filter #(not-in-points points (:p %)) data)))
+
+(defn process2 [data]
+  (loop [d data
+         mins []
+         cnt 0]
+    (if (and (> (count mins) 300) (apply = (take-last 300 mins)))
+      (count d)
+      (let [d2 (if (collisions d) (remove-collisions d) d)]
+        (recur (update-data d2) (conj mins (first (min-dist d))) (inc cnt))))))
+
+(defn run-part2 []
+  (let [data (load-data (slurp input-file))]
+    (process2 data)))
+;; 571
