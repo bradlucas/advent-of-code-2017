@@ -1,7 +1,7 @@
 (ns advent.day17.spinlock)
 
 
-(defn cycle [m pos iter]
+(defn spin-cycle [m pos iter]
   ;; starting at pos move forward circularly iter number of steps
   ;; return the now current position
   (let [len (count m)
@@ -18,7 +18,7 @@
 (defn spin [m pos iter cnt]
   ;; move through m iter amount start at idx position
   ;; insert cnt after the final position
-  (let [pos1 (cycle m pos iter)]
+  (let [pos1 (spin-cycle m pos iter)]
     (insert m pos1 cnt)))
  
 (defn run [iter num]
