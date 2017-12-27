@@ -15,7 +15,7 @@
 
 (def url "./src/advent/day6/day6.txt")
 
-(defn load-file [url]
+(defn load-data [url]
   (mapv #(Integer/parseInt %) (clojure.string/split (clojure.string/trim (slurp url)) #"\t")))
 
 
@@ -57,7 +57,7 @@
 
 
 (defn run-part1 []
-  (let [v (load-file url)]
+  (let [v (load-data url)]
     (loop [v v
            h []
            cnt 0]
@@ -78,7 +78,7 @@
 
 ;; Figure out how many cycles between the first instance of the cycle value and the end
 (defn run-part2 []
-  (let [v (load-file url)]
+  (let [v (load-data url)]
     (loop [v v
            h []
            cnt 0]
