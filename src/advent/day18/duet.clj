@@ -69,23 +69,28 @@
     (assoc registers reg (val registers))))
 
 (defn multi-value [registers reg val]
-
   (if (not (keyword? val))
     (assoc registers reg (* (reg registers) val))
     (assoc registers reg (* (reg registers) (val registers)))))
 
 (defn mod-value [registers reg val]
   (if (not (keyword? val))
-    (assoc registers reg (mod (reg registers) val))
-    (assoc registers reg (mod (reg registers) (val registers)))))
+    ;; (assoc registers reg (mod (reg registers) val))
+    ;; (assoc registers reg (mod (reg registers) (val registers)))))
+    (assoc registers reg (rem (reg registers) val))
+    (assoc registers reg (rem (reg registers) (val registers)))))
 
 (defn add-value [registers reg val]
-  (assoc registers reg (+ (reg registers) val)))
+  ;; (assoc registers reg (+ (reg registers) val)))
+    (if (not (keyword? val))
+    (assoc registers reg (+ (reg registers) val))
+    (assoc registers reg (+ (reg registers) (val registers)))))
 
 (defn jump [registers reg val idx]
-  (let [reg-value (reg registers)]
+  (let [reg-value (reg registers)
+        v (if (not (keyword? val)) val (val registers))]
     (if (> reg-value 0)
-      (+ idx val)
+      (+ idx v)
       (inc idx))))
 
 (defn rcv-value [registers v]
