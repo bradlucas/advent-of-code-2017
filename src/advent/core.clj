@@ -18,9 +18,16 @@
             [advent.day15.dueling2 :as day152]
             [advent.day16.promenade :as day16]
             [advent.day17.spinlock :as day17]
-            )
+            [advent.day18.duet :as day18]
+            [advent.day18.duet3 :as day18-part2]
+            [advent.day19.tubes :as day19]
+            [advent.day20.swarm :as day20]
+            [advent.day21.fractal :as day21]
+            [advent.day22.virus :as day22]
+            [advent.day23.coprocessor :as day23]
+            [advent.day24.moat :as day24]
+            [advent.day25.halting :as day25])
   (:gen-class))
-
 
 (defn -main [& args]
   (println "Advent of Code 2017")
@@ -72,5 +79,27 @@
 
   (println (format "Day 17 / Part 1 : %s" (day17/run-part1)))
   (println (format "Day 17 / Part 2 : %s" (day17/run-part2)))
+
+  (println (format "Day 18 / Part 1 : %s" (day18/run-part1)))
+  (println (format "Day 18 / Part 2 : %d" 7493))   ;; Run (day18-part2/run-part2) from with the REPL
+
+  (println (format "Day 19 / Part 1 : %s" (day19/run-part1)))
+  (println (format "Day 19 / Part 2 : %d" (day19/run-part2)))
+
+  (println (format "Day 20 / Part 1 : %d" (day20/run-part1)))
+  (println (format "Day 20 / Part 2 : %d" (day20/run-part2)))
+
+  (println (format "Day 21 / Part 1 : %d" (day21/run-part1)))
+  (println (format "Day 21 / Part 2 : %d" (day21/run-part2)))
   
-  )
+  (println (format "Day 22 / Part 1 : %d" (day22/run-part1)))
+  (println (format "Day 22 / Part 2 : %d" (day22/run-part2)))
+
+  (println (format "Day 23 / Part 1 : %d" (day23/run-part1)))
+  (println (format "Day 23 / Part 2 : %d" (day23/run-part2)))
+  
+  (println (format "Day 24 / Part 1 : %d" (day24/run-part1)))
+  (println (format "Day 24 / Part 2 : %d" (day24/run-part2)))
+
+  (println (format "Day 25 / Part 1 : %d" (day25/run-part1)))
+  (println (format "Day 25 / Part 2 : %s" (day25/run-part2))))
