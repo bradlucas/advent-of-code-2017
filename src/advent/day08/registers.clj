@@ -1,4 +1,4 @@
-(ns advent.day8.registers)
+(ns advent.day08.registers)
 
 ;; b inc 5 if a > 1
 ;; a inc 1 if b < 5
@@ -14,7 +14,7 @@
 ;; :op1 == "<" "==" ">" "<=" "!=" ">="
 
 
-(def url "./src/advent/day8/day8.txt")
+(def url "./src/advent/day08/day08.txt")
 
 (defn parse-line [line]
   (zipmap [:r2 :op2 :v2 :cmd :r1 :op1 :v1] (clojure.string/split line #" ")))

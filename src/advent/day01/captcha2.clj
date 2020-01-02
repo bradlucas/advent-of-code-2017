@@ -1,4 +1,4 @@
-(ns advent.day1.captcha2)
+(ns advent.day01.captcha2)
 
 ;; Part 2
 ;; 50% captcha

@@ -1,6 +1,6 @@
 # Advent of Code in Clojure 2017
 
-My [Advent of Code 2017](http://adventofcode.com) solutions with Clojure.
+My [Advent of Code 2017](http://adventofcode.com/2017) solutions with Clojure.
 
 See the [`src/advent`](https://github.com/bradlucas/advent-of-code-2017/tree/master/src/advent) directory for solutions.
 

@@ -1,4 +1,4 @@
-(ns advent.day2.checksum)
+(ns advent.day02.checksum)
 
 
 ;; For each row, determine the difference between the largest value and the smallest value;
