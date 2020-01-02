@@ -1,4 +1,4 @@
-(ns advent.day9.stream)
+(ns advent.day09.stream)
 
 
 ;; { .. } == group , groups are nestable  { { .. } }
@@ -8,7 +8,7 @@
 ;; !x == ignore x
 ;;
 
-(def url "./src/advent/day9/day9.txt")
+(def url "./src/advent/day09/day09.txt")
 
 (defn load-data [url]
   (slurp url))

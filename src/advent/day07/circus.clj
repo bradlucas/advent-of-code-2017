@@ -1,4 +1,4 @@
-(ns advent.day7.circus
+(ns advent.day07.circus
   (:require [clojure.set]
             [clojure.pprint]))
 
@@ -48,7 +48,7 @@
 ;; Root
 ;; Node who is not a child of any other node
 
-(def url "./src/advent/day7/day7.txt")
+(def url "./src/advent/day07/day07.txt")
 
 (defn split-name [s]
   (let [[name right] (clojure.string/split s #" ")
@@ -108,7 +108,7 @@
 
 
 ;; Find the node whose children's weight don't match it's own
-(def urltest "./src/advent/day7/day7test.txt")
+(def urltest "./src/advent/day07/day07test.txt")
 
 
 ;; {:name root

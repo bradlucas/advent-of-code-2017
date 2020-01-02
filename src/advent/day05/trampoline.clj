@@ -1,4 +1,4 @@
-(ns advent.day5.trampoline)
+(ns advent.day05.trampoline)
 
 
 ;; 0 3 0 1 -3
@@ -8,7 +8,7 @@
 ;; 2 (4) 0 1 -2 => 
 ;; 2 5 0 1 -2 =>
 
-(def url "./src/advent/day5/day5.txt")
+(def url "./src/advent/day05/day05.txt")
 
 
 

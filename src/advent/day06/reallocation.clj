@@ -1,4 +1,4 @@
-(ns advent.day6.reallocation)
+(ns advent.day06.reallocation)
 
 
 ;; cycle
@@ -13,7 +13,7 @@
 ;; stop when a previous state is reached
 
 
-(def url "./src/advent/day6/day6.txt")
+(def url "./src/advent/day06/day06.txt")
 
 (defn load-data [url]
   (mapv #(Integer/parseInt %) (clojure.string/split (clojure.string/trim (slurp url)) #"\t")))

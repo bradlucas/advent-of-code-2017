@@ -1,4 +1,4 @@
-(ns advent.day1.captcha)
+(ns advent.day01.captcha)
 
 ;; Part 1
 ;; sum of all digits that match the next digit

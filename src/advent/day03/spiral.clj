@@ -1,4 +1,4 @@
-(ns advent.day3.spiral)
+(ns advent.day03.spiral)
 
 
 ;; 17  16  15  14  13

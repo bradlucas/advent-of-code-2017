@@ -1,9 +1,9 @@
-(ns advent.day4.passphrase)
+(ns advent.day04.passphrase)
 
 
 ;; input
 ;; http://adventofcode.com/2017/day/4/input
-(def url "./src/advent//day4/day4.txt")
+(def url "./src/advent//day04/day04.txt")
 
 
 ;; valid-passphrase
